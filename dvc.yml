@@ -1,7 +1,0 @@
-stages:
-  preprocess:
-    cmd: python scripts/test.py
-    deps:
-      - data/raw
-    outs:
-      - data/processed
