@@ -1,3 +1,32 @@
+# Environnement virtuel Python
 venv/
 __pycache__/
 *.pyc
+
+# Clés API et Variables d'environnement
+Api_Key*
+.env
+*.json
+
+# Fichiers de métriques
+/metrics.json
+/metrics_train.json
+
+# Fichiers générés par DVC
+/.dvc/
+data/
+models/
+
+# Fichiers Docker
+Dockerfile
+*.log
+
+# Logs et artefacts MLflow
+mlruns/
+
+# Fichiers temporaires
+*.tmp
+*.bak
+
+# Autres fichiers sensibles
+.gpg
