@@ -1,0 +1,33 @@
+stages:
+  preprocess:
+    cmd: python scripts/preprocess.py
+    deps:
+      - data/raw
+    outs:
+      - data/processed
+
+  train:
+    cmd: python scripts/train.py
+    deps:
+      - data/processed
+    params:
+      - train.n_estimators
+      - train.max_depth
+    outs:
+      - models/model.pkl
+    metrics:
+      - metrics_train.json
+
+  evaluate:
+    cmd: python scripts/evaluate.py
+    deps:
+      - models/model.pkl
+    metrics:
+      - metrics.json
+
+  #deploy:
+    #cmd: docker build -t maintenance-api . && docker run -p 5000:5000 maintenance-api
+    #deps:
+      #- scripts/api.py
+      #- models/model.pkl
+      #- Dockerfile
