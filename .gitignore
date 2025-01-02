@@ -2,7 +2,9 @@
 venv/
 __pycache__/
 *.pyc
-
+env_prj_synthese/
+__pycache__/
+*.pyc
 # Clés API et Variables d'environnement
 Api_Key*
 .env
