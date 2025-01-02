@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b58c9f9fe2f041edb1da547126be4204/artifacts
+end_time: 1735770250093
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b58c9f9fe2f041edb1da547126be4204
+run_name: bedecked-fox-719
+run_uuid: b58c9f9fe2f041edb1da547126be4204
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735770244900
+status: 4
+tags: []
+user_id: admin

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8597a8a583344dcd8855cd131e2adc15/artifacts
+end_time: 1735770351982
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8597a8a583344dcd8855cd131e2adc15
+run_name: fun-turtle-337
+run_uuid: 8597a8a583344dcd8855cd131e2adc15
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735770344581
+status: 3
+tags: []
+user_id: admin
