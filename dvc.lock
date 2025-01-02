@@ -5,9 +5,9 @@ stages:
     deps:
     - path: data/raw
       hash: md5
-      md5: 2a7a4530bb60490ac10b2988766ccf4e.dir
+      md5: 0bcef2fbf19f7df4074f7fc51fd731e5.dir
       size: 337775704
-      nfiles: 4
+      nfiles: 3
     outs:
     - path: data/processed
       hash: md5
@@ -31,6 +31,10 @@ stages:
       hash: md5
       md5: aed4c6216573de4906939205915c8bca
       size: 90
+    - path: models/evidently_model_report.html
+      hash: md5
+      md5: 0e15e783604bb267cbd52725b1ccd5d4
+      size: 3085837
     - path: models/model.pkl
       hash: md5
       md5: af60cf32d6d024525a4638f4c1085e86

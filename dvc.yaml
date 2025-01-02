@@ -15,6 +15,7 @@ stages:
       - train.max_depth
     outs:
       - models/model.pkl
+      - models/evidently_model_report.html
     metrics:
       - metrics_train.json
 
