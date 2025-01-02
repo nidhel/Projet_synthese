@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d4327cb9fc4e4d3586e7579910f9a2d4/artifacts
+end_time: 1735769111034
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d4327cb9fc4e4d3586e7579910f9a2d4
+run_name: bemused-fox-348
+run_uuid: d4327cb9fc4e4d3586e7579910f9a2d4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735769110998
+status: 4
+tags: []
+user_id: admin
