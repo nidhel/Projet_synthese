@@ -23,6 +23,33 @@ df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
 #print(f"Nombre de doublons dans les timestamps : {len(duplicated_timestamps)}")
 
 #####################
+##### Étape 1 : #####
+#####################
+# Ajuster dabord les timestamp existant pour respecter le gap (saut) de 10 secondes.
+def adjust_last_digit_of_seconds(timestamp):
+    """Ajuste uniquement le dernier chiffre des secondes du timestamp."""
+    seconds = timestamp.second
+    last_digit = seconds % 10  # Extraire le dernier chiffre
+    
+    if 1 <= last_digit <= 5:
+        # Arrondir à 0
+        adjustment = -last_digit
+    elif last_digit > 5:
+        # Arrondir au multiple de 10 suivant
+        adjustment = 10 - last_digit
+    else:
+        # Si le dernier chiffre est déjà 0
+        adjustment = 0
+
+    # Appliquer l'ajustement aux secondes
+    return timestamp + pd.Timedelta(seconds=adjustment)
+
+# Appliquer la correction à tous les timestamps
+df['timestamp'] = df['timestamp'].apply(adjust_last_digit_of_seconds)
+
+
+
+#####################
 ##### Étape 2 : #####
 #####################
 
@@ -53,6 +80,18 @@ while True:
 
     # Ajouter les nouveaux timestamps dans le DataFrame
     df = pd.concat([df, missing_data]).drop_duplicates(subset='timestamp').sort_values('timestamp').reset_index(drop=True)
+
+    # Afficher l'état actuel
+    print(f"Correction appliquée à l'intervalle autour de l'index {idx}.")
+    print(df.loc[max(idx - 2, 0):min(idx + len(new_times) + 2, len(df) - 1), ['timestamp']])
+
+# Vérification finale
+time_diffs_corrected = df['timestamp'].diff().dt.total_seconds()
+print("\nStatistiques des intervalles corrigés après correction finale :")
+print(f"Min : {time_diffs_corrected.min()} secondes")
+print(f"Max : {time_diffs_corrected.max()} secondes")
+print(f"Mode (valeur typique) : {time_diffs_corrected.mode()[0]} secondes")
+print(f"Nombre d'irrégularités restantes : {(time_diffs_corrected != 10).sum()}")    
 
 # Ajouter les classes de panne
 # Classe 0 : Pas de panne détectée
