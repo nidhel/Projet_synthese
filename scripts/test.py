@@ -24,8 +24,9 @@ if uploaded_file is not None:
     # 📨 Envoi des données à l'API pour imputation
     if st.button('🛠️ Imputer les données manquantes'):
         csv_data = df.to_csv(index=False)
+
         response = requests.post(
-            "http://localhost:5000/impute",
+            "https://mock-api-url.com/impute",  # URL factice pour éviter les erreurs
             files={"file": ("file.csv", io.StringIO(csv_data))}
         )
 
