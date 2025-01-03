@@ -1,7 +1,10 @@
+# app.py
+
 import streamlit as st
 import pandas as pd
 import requests
 import io
+from validation import validate_missing_data  # Importation de la validation
 
 # 🌟 Titre de l'application
 st.title('Imputation Automatique des Données avec LightGBM')
@@ -13,13 +16,9 @@ uploaded_file = st.file_uploader("Téléchargez un fichier CSV", type=["csv"])
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     st.write("📊 **Aperçu du fichier téléchargé :**", df.head())
-
-    # Identifier les colonnes avec des valeurs manquantes
-    missing_columns = df.columns[df.isnull().any()].tolist()
-    if not missing_columns:
-        st.success("✅ Aucune valeur manquante détectée dans le fichier.")
-    else:
-        st.warning(f"⚠️ Colonnes avec valeurs manquantes : {', '.join(missing_columns)}")
+    
+    # 🔍 Validation des données manquantes
+    validate_missing_data(df)
 
     # 📨 Envoi des données à l'API pour imputation
     if st.button('🛠️ Imputer les données manquantes'):
