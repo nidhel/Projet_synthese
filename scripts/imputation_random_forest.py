@@ -20,6 +20,10 @@ missing_counts_df = pd.DataFrame(list(missing_counts.items()), columns=['Colonne
 # Enregistrer le dataframe corrigé dans un fichier CSV
 df.to_csv("data/processed/MetroPT3_corrected_marked.csv", index=True)
 
+# Charger les données
+df = pd.read_csv("data/processed/MetroPT3_corrected_marked.csv", delimiter=",", decimal=".", index_col=0)
+df.reset_index(drop=True, inplace=True)
+
 # Convertir timestamp
 df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
 
