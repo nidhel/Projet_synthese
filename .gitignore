@@ -6,14 +6,14 @@ __pycache__/
 env_prj_synthese/
 __pycache__/
 *.pyc
-
+.env
 # Clés API et Variables d'environnement
 Api_Key*
 .env
 *.json
 
 # Fichiers de métriques
-/metrics.json
+metrics.json
 
 # Fichiers générés par DVC
 /.dvc/
@@ -23,6 +23,7 @@ models/
 # Fichiers Docker
 Dockerfile
 *.log
+.csv
 
 # Logs et artefacts MLflow
 mlruns/
