@@ -1,14 +1,9 @@
 # Environnement virtuel Python
 venv/
+env_tft/
 __pycache__/
 *.pyc
 
-env_prj_synthese/
-__pycache__/
-*.pyc
-env_prj_synthese/
-__pycache__/
-*.pyc
 # Clés API et Variables d'environnement
 Api_Key*
 .env
@@ -34,6 +29,6 @@ mlruns/
 *.tmp
 *.bak
 
-# Autres fichiers sensibles
+# Autres fichiers non pertinents
 .gpg
-
+.idea/
