@@ -3,7 +3,7 @@ import numpy as np
 from xgboost import XGBRegressor, XGBClassifier
 
 # Charger les données
-df = pd.read_csv("data/processed/MetroPT3_corrected_marked.csvd.csv", delimiter=",", decimal=".", index_col=0)
+df = pd.read_csv("data/processed/MetroPT3_corrected_marked.csv", delimiter=",", decimal=".", index_col=0)
 df.reset_index(drop=True, inplace=True)
 
 # Convertir timestamp

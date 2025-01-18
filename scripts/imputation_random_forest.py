@@ -17,6 +17,7 @@ missing_counts = {col: df[col].sum() for col in df.columns if col.endswith('_is_
 # Convertir les résultats en DataFrame pour un affichage clair
 missing_counts_df = pd.DataFrame(list(missing_counts.items()), columns=['Colonne', 'Nombre de 1'])
 
+
 # Enregistrer le dataframe corrigé dans un fichier CSV
 df.to_csv("data/processed/MetroPT3_corrected_marked.csv", index=True)
 
