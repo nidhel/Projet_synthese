@@ -20,7 +20,7 @@ metrics.json
 # Fichiers générés par DVC
 /.dvc/
 data/
-models/
+
 
 # Fichiers Docker
 Dockerfile
@@ -36,4 +36,4 @@ mlruns/
 
 # Autres fichiers sensibles
 .gpg
-/models
+
