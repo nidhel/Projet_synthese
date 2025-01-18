@@ -31,3 +31,4 @@ mlruns/
 
 # Autres fichiers non pertinents
 .gpg
+.idea/
