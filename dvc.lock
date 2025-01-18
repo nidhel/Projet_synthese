@@ -1,0 +1,28 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python scripts/preprocess.py
+    deps:
+    - path: data/raw
+      hash: md5
+      md5: 0bcef2fbf19f7df4074f7fc51fd731e5.dir
+      size: 337775704
+      nfiles: 3
+    outs:
+    - path: data/processed
+      hash: md5
+      md5: d3c1fec492a0db562482ad820fdfdcb5.dir
+      size: 4510
+      nfiles: 1
+  evaluate:
+    cmd: python scripts/evaluate.py
+    deps:
+    - path: models/model.pkl
+      hash: md5
+      md5: af60cf32d6d024525a4638f4c1085e86
+      size: 114865
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 9a0379eaa11dd7b9e9995a62a5f21656
+      size: 17

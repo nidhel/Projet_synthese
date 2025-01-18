@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9c06d7a32ec64cbca0d47acaf0293647/artifacts
+end_time: 1735770952328
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9c06d7a32ec64cbca0d47acaf0293647
+run_name: chill-pug-188
+run_uuid: 9c06d7a32ec64cbca0d47acaf0293647
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1735770944651
+status: 4
+tags: []
+user_id: admin

@@ -1,0 +1,6 @@
+[core]
+    remote = g_drive
+['remote "g_drive"']
+    url = gdrive://1eMf4uykoX7Nn83-4tB92pIm_hBvRkE11
+    gdrive_use_service_account = true
+    gdrive_service_account_json_file_path = C:\AEC IA\Projet_synthese\Api_Key\google_key.json

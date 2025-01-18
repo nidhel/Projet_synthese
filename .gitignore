@@ -1,5 +1,6 @@
 # Environnement virtuel Python
 venv/
+env_tft/
 __pycache__/
 *.pyc
 
@@ -9,8 +10,7 @@ Api_Key*
 *.json
 
 # Fichiers de métriques
-/metrics.json
-/metrics_train.json
+metrics.json
 
 # Fichiers générés par DVC
 /.dvc/
@@ -20,6 +20,7 @@ models/
 # Fichiers Docker
 Dockerfile
 *.log
+.csv
 
 # Logs et artefacts MLflow
 mlruns/
@@ -28,5 +29,6 @@ mlruns/
 *.tmp
 *.bak
 
-# Autres fichiers sensibles
+# Autres fichiers non pertinents
 .gpg
+.idea/
